@@ -77,7 +77,7 @@ body {
   background-color: #f19f0f;
   opacity: 0;
 
-  transform: translateY(0) scaleY(0.5);
+  transform: translateY(0) scaleY(0.5); /* можно без scaleY просто двигая линию */
 
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
