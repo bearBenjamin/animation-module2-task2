@@ -92,6 +92,7 @@ p:hover .link--2::before,
   color: #cd4436;
   padding: 0 4px;
   height: 1em;
+  overflow: hidden;
 }
 
 .link--3::after {
@@ -118,6 +119,45 @@ p:hover .link--2::before,
   padding: 0 20px;
   height: 50px;
   line-height: 50px;
+}
+
+.link--4::before,
+.link--4::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: #435a6b;
+  
+  opacity: 0.2;
+
+  transition: all 0.3s;
+}
+
+.link--4::before {
+  top: 0;
+  left: 0;
+  transform: rotate(90deg);
+  transform-origin: 0 0;
+}
+
+.link--4::after {
+  right: 0;
+  bottom: 0;
+  transform: rotate(90deg);
+  transform-origin: 100% 0;
+}
+
+.link--4:hover::before {
+  left: 50%;
+  transform: rotate(0deg) translateX(-50%);
+  opacity: 1;
+}
+
+.link--4:hover::after {
+  right: 50%;
+  transform: rotate(0deg) translateX(50%);
+  opacity: 1;
 }
 
 .link--5 {
